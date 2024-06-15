@@ -19,9 +19,9 @@ public class RestConfiguration {
 
     private final int writeTimeout;
 
-    public RestConfiguration(@Value("CONNECT_TIMEOUT_SECONDS") final int connectTimeout,
-                             @Value("READ_TIMEOUT_SECONDS") final int readTimeout,
-                             @Value("WRITE_TIMEOUT_SECONDS") final int writeTimeout) {
+    public RestConfiguration(@Value("${CONNECT_TIMEOUT_SECONDS}") final int connectTimeout,
+                             @Value("${READ_TIMEOUT_SECONDS}") final int readTimeout,
+                             @Value("${WRITE_TIMEOUT_SECONDS}") final int writeTimeout) {
         this.connectTimeout = connectTimeout;
         this.readTimeout = readTimeout;
         this.writeTimeout = writeTimeout;
